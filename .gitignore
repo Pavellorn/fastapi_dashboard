@@ -1,0 +1,180 @@
+# .gitignore
+
+# ══════════════════════════════════════════════════════════
+# Python
+# ══════════════════════════════════════════════════════════
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# ══════════════════════════════════════════════════════════
+# Данные проекта
+# ══════════════════════════════════════════════════════════
+# Временные CSV файлы
+data/*.csv
+data/*.xlsx
+data/*.xls
+
+# Готовые дашборды
+outputs/*.html
+outputs/*.png
+outputs/*.pdf
+
+# Но оставить папки
+!data/.gitkeep
+!outputs/.gitkeep
+
+# ══════════════════════════════════════════════════════════
+# IDE и редакторы
+# ══════════════════════════════════════════════════════════
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ══════════════════════════════════════════════════════════
+# Операционная система
+# ══════════════════════════════════════════════════════════
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ══════════════════════════════════════════════════════════
+# Логи и базы данных
+# ══════════════════════════════════════════════════════════
+*.log
+*.sql
+*.sqlite
+*.db
+
+# ══════════════════════════════════════════════════════════
+# Docker
+# ══════════════════════════════════════════════════════════
+# Не игнорируем Dockerfile и docker-compose.yml
+# Но игнорируем временные файлы Docker
+.dockerignore
+
+# ══════════════════════════════════════════════════════════
+# Безопасность
+# ══════════════════════════════════════════════════════════
+# API ключи и секреты
+secrets.py
+.secrets
+config.local.py
+*.key
+*.pem
+*.cert
+
+# Конфигурация с ключами (если они там есть)
+app/config.py  
+
+# ══════════════════════════════════════════════════════════
+# Разное
+# ══════════════════════════════════════════════════════════
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# Временные файлы
+tmp/
+temp/
+*.tmp
+
+# Архивы
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
