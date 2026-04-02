@@ -1,15 +1,14 @@
-# docker-compose.yml
 services:
   web:
-    build: .
+    image: pashakor/fast_api_stats-web:latest
     container_name: ozon-dashboard
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     volumes:
       - ./data:/app/data
       - ./outputs:/app/outputs
-    env_file:
-      - .env
     environment:
       - TZ=Europe/Moscow
     restart: unless-stopped
@@ -18,3 +17,4 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+      start_period: 40s
