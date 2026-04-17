@@ -1,9 +1,9 @@
 services:
   web:
-    image: pashakor/fast_api_stats-web:latest
+    image: pashakor/ozon-dashboard:latest
     container_name: ozon-dashboard
     ports:
-      - "8000:8000"
+      - "8001:8000"
     env_file:
       - .env
     volumes:
@@ -11,10 +11,10 @@ services:
       - ./outputs:/app/outputs
     environment:
       - TZ=Europe/Moscow
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-https://interparts.mpsuper.ru}
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
